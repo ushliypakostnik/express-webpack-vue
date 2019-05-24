@@ -1,0 +1,219 @@
+// Project mixins
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+// Media
+//////////////////////////////////////////////////////
+// Брекпоинты - смотреть в _variables.scss
+
+@mixin lg {
+  @media (min-width: $breackpoint_lg) {
+    @content;
+  }
+}
+
+@mixin not-lg {
+  @media (max-width: $breackpoint_md_max) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: $breackpoint_sm) and (max-width: $breackpoint_sm_max) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: $breackpoint_xs_max) {
+    @content;
+  }
+}
+
+@mixin not-xs {
+  @media (min-width: $breackpoint_sm) {
+    @content;
+  }
+}
+
+@mixin sm-and-xs {
+  @media (max-width: $breackpoint_sm_max) {
+    @content;
+  }
+}
+
+@mixin min {
+  @media (max-width: $breackpoint-min) {
+    @content;
+  }
+}
+
+
+// Retina
+@mixin retina {
+  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}
+
+// Size )
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+
+// Elements
+//////////////////////////////////////////////////////
+
+// Примеси для покраски кнопок
+
+@mixin btn-color($color, $background) {
+  background-color: $background;
+  color: $color;
+  @include transition(background $transition-duration $transition-timing-function $transition-delay);
+
+  &:hover, &:active {
+    background-color: darken($background, $fade );
+    color: $color;
+  }
+
+  @include sm-and-xs {
+    &, &:hover, &:focus {
+      background-color: $background;
+      color: $color;
+    }
+    &:active {
+      background-color: darken($background, $fade);
+      color: $color;
+    }
+  }
+}
+
+@mixin btn-transparent-color($color) {
+  border: 1px solid $color;
+  background-color: transparent;
+  color: $color;
+  border-color: $color;
+  @include transition(all $transition-duration $transition-timing-function $transition-delay);
+
+  &:hover, &:active {
+    color: darken($color, $fade);
+    border-color: darken($color, $fade);
+  }
+
+  @include sm-and-xs {
+    &, &:hover, &:focus {
+      color: $color;
+      border-color: $color;
+    }
+    &:active {
+      color: darken($color, $fade);
+      border-color: darken($color, $fade);
+    }
+  }
+}
+
+// Примесь для покраски ссылок
+@mixin link-style($color, $color-hover) {
+  @include transition(color $transition-duration $transition-timing-function $transition-delay);
+
+  &, &:focus {
+    color: $color;
+  }
+  &:hover, &:active {
+    color: $color-hover;
+  }
+
+  @include sm-and-xs {
+    &, &:hover, &:focus {
+     color: $color;
+    }
+    &:active {
+      color: $color-hover;
+    }
+  }
+}
+
+
+// Effects
+//////////////////////////////////////////////////////
+
+// Flexbox mixins
+
+@mixin flexbox {
+  display: -webkit-box;
+    display: -webkit-flex; // ??
+      display: -ms-flexbox;
+        display: -moz-flex; // ??
+  display: flex;
+
+  -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  -webkit-box-pack: start;
+    -ms-flex-pack: start;
+  justify-content: flex-start;
+
+  -webkit-box-align: start;
+    -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+// Flex on not desctop
+@mixin not-lg-flexbox {
+  @include not-lg {
+    @include flexbox;
+  }
+}
+
+// Order
+@mixin flex-order($order) {
+  -webkit-box-ordinal-group: $order + 1;
+  -ms-flex-order: $order;
+  order: $order;
+}
+
+// Multi-transition
+// Usage:   @include transition(width, height 0.3s ease-in-out);
+//
+// Output: transition(width 0.3s, height 0.3s ease-in-out);
+//
+// Pass in any number of transitions
+@mixin transition($transitions...) {
+  $unfoldedTransitions: ();
+  @each $transition in $transitions {
+    $unfoldedTransitions: append($unfoldedTransitions, unfoldTransition($transition), comma);
+  }
+
+  transition: $unfoldedTransitions;
+}
+
+@function unfoldTransition($transition) {
+  // Default values
+  $property: all;
+  $duration: $transition-duration;
+  $easing: $transition-timing-function; // Browser default is ease, which is what we want
+  $delay: null; // Browser default is 0, which is what we want
+  $defaultProperties: ($property, $duration, $easing, $delay);
+
+  // Grab transition properties if they exist
+  $unfoldedTransition: ();
+  @for $i from 1 through length($defaultProperties) {
+    $p: null;
+    @if $i <= length($transition) {
+      $p: nth($transition, $i)
+    } @else {
+      $p: nth($defaultProperties, $i)
+    }
+    $unfoldedTransition: append($unfoldedTransition, $p);
+  }
+
+  @return $unfoldedTransition;
+}
