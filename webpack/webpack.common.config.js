@@ -35,10 +35,12 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'html/legacy.html',
+      inject: false, // no link css
       template: path.resolve(__dirname, '../src/html/legacy.html')
     }),
     new HtmlWebpackPlugin({
       filename: 'html/sandbox_page.html',
+      xhtml: true, // selfclosed tag to link css
       template: path.resolve(__dirname, '../src/html/sandbox_page.html')
     })
   ]
