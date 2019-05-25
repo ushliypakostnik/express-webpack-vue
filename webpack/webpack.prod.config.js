@@ -72,8 +72,8 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: 'css/styles.min.css',
     })
-    /*new ReplaceInFileWebpackPlugin([
-      { dir: 'build', files: [''], rules: [{ search: '', replace: '' }]}
-    ])*/
+    //new ReplaceInFileWebpackPlugin([
+    //  { dir: 'build', files: [''], rules: [{ search: '', replace: '' }]}
+    //])
   ]
 });

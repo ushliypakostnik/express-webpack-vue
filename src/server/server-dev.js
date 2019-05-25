@@ -8,7 +8,7 @@ import config from '../config.js';
 
 const app = express(),
             DIST_DIR = __dirname,
-            HTML_FILE = path.join(DIST_DIR, 'index.html'),
+            HTML_FILE = path.join(DIST_DIR, 'html/sandbox_page.html'),
             compiler = webpack(WebpackConfig)
 
 app.use(webpackDevMiddleware(compiler, {
@@ -19,13 +19,13 @@ app.use(webpackHotMiddleware(compiler));
 
 app.get('*', (req, res, next) => {
   compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
-  if (err) {
-    return next(err)
-  }
-  res.set('content-type', 'text/html')
-  res.send(result)
-  res.end()
-  })
+    if (err) {
+      return next(err)
+    }
+    res.set('content-type', 'text/html');
+    res.send(result);
+    res.end();
+  });
 });
 
 app.listen(config.PORT, () => {
