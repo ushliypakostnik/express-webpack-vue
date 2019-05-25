@@ -1,6 +1,11 @@
+# dependencies
 node_modules
 .DS_Store
-dist
 
-Coverage
-coverage
+# production
+build
+
+.sass-cache
+npm-debug.log
+
+*.sublime-workspace
