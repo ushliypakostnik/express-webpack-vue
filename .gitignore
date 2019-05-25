@@ -1,7 +1,6 @@
-# dependencies
 node_modules
+.DS_Store
+dist
 
-# production
-build
-
-npm-debug.log
+Coverage
+coverage
