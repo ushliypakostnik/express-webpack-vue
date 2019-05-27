@@ -13,6 +13,8 @@
             $animations: #{$animations + ", "};
         }
     }
+
+    animation: $animations;
 }
 
 // Keyframes examples
