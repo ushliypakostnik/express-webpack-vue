@@ -29,7 +29,7 @@ class PageDesign {
     console.log(this.name + ' redraw');
   }
 
-  init() {
+  init = () => {
     console.log(this.name + ' init');
     window.onresize = this.redraw;
   }
