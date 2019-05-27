@@ -7,8 +7,7 @@ import WebpackConfig from '../../webpack/webpack.dev.config.js';
 import config from '../config.js';
 
 const app = express(),
-            DIST_DIR = __dirname,
-            HTML_FILE = path.join(DIST_DIR, 'html/sandbox_page.html'),
+            HTML_FILE = path.join(config.DIST_DIR, 'html/sandbox_page.html'),
             compiler = webpack(WebpackConfig)
 
 app.use(webpackDevMiddleware(compiler, {

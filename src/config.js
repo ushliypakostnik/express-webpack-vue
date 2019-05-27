@@ -3,13 +3,17 @@ require('dotenv').config();
 const env = process.env.NODE_ENV;
 
 const development = {
-  MEDIA_URL: process.env.MEDIA_URL || 'http://127.0.0.1:8082',
-  PORT: process.env.PORT || 8080
+  PORT: process.env.PORT || 8080,
+  MEDIA_URL: process.env.MEDIA_URL || 'http://127.0.0.1:8080',
+  DIST_DIR: __dirname,
+  STATIC_SERVE: false
 };
 
 const production = {
-  MEDIA_URL: process.env.MEDIA_URL || 'http://api.kafedra.org',
-  PORT: process.env.PORT || 8080
+  PORT: process.env.PORT || 8080,
+  MEDIA_URL: process.env.MEDIA_URL || 'http://',
+  DIST_DIR: process.env.DIST_DIR || __dirname,
+  STATIC_SERVE: process.env.STATIC_SERVE || true
 };
 
 const config = {
