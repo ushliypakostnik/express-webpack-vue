@@ -4,6 +4,7 @@ import Logger from './logger';
 let logger = new Logger(path.basename(__filename, '.js'));
 
 /*const PageDesign = (() => {
+  const NAME = 'PageDesign';
 
   const redraw = () => {
     logger.info('redraw');
@@ -28,7 +29,8 @@ PageDesign.init();*/
 
 
 class PageDesign {
-  constructor() {
+  constructor(name) {
+    this.name = name;
   }
 
   redraw = () => {
@@ -43,6 +45,5 @@ class PageDesign {
 
 export default PageDesign;
 
-/*где-то:
-const page = new PageDesign('PageDesign');
+/*const page = new PageDesign('PageDesign');
 page.init();*/
