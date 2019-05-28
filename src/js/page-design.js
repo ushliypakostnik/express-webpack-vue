@@ -4,14 +4,13 @@ import Logger from './logger';
 let logger = new Logger(path.basename(__filename, '.js'));
 
 /*const PageDesign = (() => {
-  const NAME = 'PageDesign';
 
   const redraw = () => {
-    logger.info(NAME + ' redraw');
+    logger.info('redraw');
   }
 
   const init = () => {
-    logger.info(NAME + ' init');
+    logger.info('init');
 
     window.addEventListener('resize', () => redraw());
   };
@@ -29,21 +28,21 @@ PageDesign.init();*/
 
 
 class PageDesign {
-  constructor(name) {
-    this.name = name;
+  constructor() {
   }
 
   redraw = () => {
-    logger.info(this.name + ' redraw');
+    logger.info('redraw');
   }
 
   init = () => {
-    logger.info(this.name + ' init');
+    logger.info('init');
     window.onresize = this.redraw;
   }
 }
 
 export default PageDesign;
 
-/*const page = new PageDesign('PageDesign');
+/*где-то:
+const page = new PageDesign('PageDesign');
 page.init();*/
