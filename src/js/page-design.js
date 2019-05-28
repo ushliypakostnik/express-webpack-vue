@@ -1,12 +1,17 @@
+import path from 'path';
+import Logger from './logger';
+
+let logger = new Logger(path.basename(__filename, '.js'));
+
 /*const PageDesign = (() => {
   const NAME = 'PageDesign';
 
   const redraw = () => {
-    console.log(NAME + ' redraw');
+    logger.info(NAME + ' redraw');
   }
 
   const init = () => {
-    console.log(NAME + ' init');
+    logger.info(NAME + ' init');
 
     window.addEventListener('resize', () => redraw());
   };
@@ -26,11 +31,11 @@ class PageDesign {
   }
 
   redraw = () => {
-    console.log(this.name + ' redraw');
+    logger.info(this.name + ' redraw');
   }
 
   init = () => {
-    console.log(this.name + ' init');
+    logger.info(this.name + ' init');
     window.onresize = this.redraw;
   }
 }
