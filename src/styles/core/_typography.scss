@@ -75,7 +75,7 @@ a {
 // Обычный параграф
 p {
   color: $color_text;
-  margin-bottom: $indent-size;
+  margin-bottom: $size;
   @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
 }
 

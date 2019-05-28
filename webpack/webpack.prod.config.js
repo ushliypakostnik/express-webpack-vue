@@ -50,11 +50,6 @@ module.exports = merge(common, {
         ]
       },
       {
-        // Loads images into CSS and Javascript files
-        test: /\.jpg$/,
-        use: [{loader: 'url-loader'}]
-      },
-      {
         // Loads CSS and SCSS into a file when you import it via Javascript
         // Rules are set in MiniCssExtractPlugin
         test: /\.s?css$/i,

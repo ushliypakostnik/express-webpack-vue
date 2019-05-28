@@ -44,7 +44,7 @@
 }
 
 @mixin min {
-  @media (max-width: $breackpoint-min) {
+  @media (max-width: $breackpoint-xs) {
     @content;
   }
 }

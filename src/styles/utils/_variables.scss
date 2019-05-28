@@ -120,9 +120,9 @@ $text-shadow_size: 4px;
 // Sizes
 //////////////////////////////////////////////////////
 
-$indent-size: 20px;
+$size: 20px;
 
-$input_height: $indent-size * 2;
+$input_height: $size * 2;
 
 
 // Breackpoints and containers
@@ -133,10 +133,8 @@ $breackpoint_xl: 1499px;
 // Брекпоинты между большими мониторами и очень большими мониторами
 $breackpoint_mg: 1700px;
 
-$breackpoint-min: 360px; // для отслеживания устройств с совсем маленькими экранами
-
 // Extra small screen / XS / phone
-$breackpoint_xs:                  480px !global;
+$breackpoint_xs:                  360px !global;
 $breackpoint_xs_min:              $breackpoint_xs !global;
 
 // Small screen / SM / tablet
@@ -163,7 +161,7 @@ $breackpoint_xs_max:              ($breackpoint_sm_min - 1) !global;
 $breackpoint_sm_max:              ($breackpoint_md_min - 1) !global;
 $breackpoint_md_max:              ($breackpoint_lg_min - 1) !global;
 $breackpoint_lg_max:              ($breackpoint_xl_min - 1) !global;
-$breackpoint_mg_max:              ($breackpoint_mg_min - 1) !global;
+$breackpoint_xl_max:              ($breackpoint_mg_min - 1) !global;
 
 // Container sizes
 
