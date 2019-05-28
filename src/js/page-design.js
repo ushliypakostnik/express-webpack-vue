@@ -22,7 +22,10 @@ let logger = new Logger(path.basename(__filename, '.js'));
   };
 })();
 
-export default PageDesign;*/
+export default PageDesign;
+
+где-то:
+PageDesign.init();*/
 
 
 class PageDesign {
@@ -41,3 +44,6 @@ class PageDesign {
 }
 
 export default PageDesign;
+
+/*const page = new PageDesign('PageDesign');
+page.init();*/
