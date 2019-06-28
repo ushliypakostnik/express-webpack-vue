@@ -1,9 +1,9 @@
 import path from 'path';
 import Logger from './logger';
 
-let logger = new Logger(path.basename(__filename, '.js'));
+const logger = new Logger(path.basename(__filename, '.js'));
 
-/*const PageDesign = (() => {
+/* const PageDesign = (() => {
   const NAME = 'PageDesign';
 
   const redraw = () => {
@@ -25,7 +25,7 @@ let logger = new Logger(path.basename(__filename, '.js'));
 export default PageDesign;
 
 где-то:
-PageDesign.init();*/
+PageDesign.init(); */
 
 
 class PageDesign {
@@ -45,5 +45,5 @@ class PageDesign {
 
 export default PageDesign;
 
-/*const page = new PageDesign('PageDesign');
-page.init();*/
+// const page = new PageDesign('PageDesign');
+// page.init();

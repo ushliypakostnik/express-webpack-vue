@@ -13,23 +13,19 @@ const ScreenHelper = (() => {
   }
 
   function isSM() {
-    return window.matchMedia(
-      `(min-width: ${SM}px) and (max-width: ${MD - 1}px)`).matches;
+    return window.matchMedia(`(min-width: ${SM}px) and (max-width: ${MD - 1}px)`).matches;
   }
 
   function isMD() {
-    return window.matchMedia(
-      `(min-width: ${MD}px) and (max-width: ${LG - 1}px)`).matches;
+    return window.matchMedia(`(min-width: ${MD}px) and (max-width: ${LG - 1}px)`).matches;
   }
 
   function isDesktop() {
-    return window.matchMedia(
-      `(min-width: ${MD}px)`).matches;
+    return window.matchMedia(`(min-width: ${MD}px)`).matches;
   }
 
   function isLG() {
-    return window.matchMedia(
-      `(min-width: ${LG}px)`).matches;
+    return window.matchMedia(`(min-width: ${LG}px)`).matches;
   }
 
   return {
@@ -37,7 +33,7 @@ const ScreenHelper = (() => {
     isSM,
     isMD,
     isLG,
-    isDesktop
+    isDesktop,
   };
 })();
 

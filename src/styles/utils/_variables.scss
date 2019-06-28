@@ -170,13 +170,13 @@ $content-container_md: 940px;
 $content-container_lg: 1140px;
 
 // Small screen / tablet
-$container_sm:                 ($content-container_sm + $indent_size);
+$container_sm:                 ($content-container_sm + $size);
 
 // Medium screen / desktop
-$container_md:                 ($content-container_md + $indent_size);
+$container_md:                 ($content-container_md + $size);
 
 // Large screen / wide desktop
-$container_lg:                 ($content-container_lg + $indent_size);
+$container_lg:                 ($content-container_lg + $size);
 
 
 // Elements

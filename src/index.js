@@ -1,11 +1,11 @@
-//import somescript from './js/somescript';
+// import somescript from './js/somescript';
 import './styles/_stylebase.scss';
 
-import Favicon from './images/favicon.jpg';
-import Noize from './images/layout/noise.png';
+import Favicon from './images/favicon.jpg'; // eslint-disable-line no-unused-vars
+// import Someimage from './images/layout/someimagе.png';
 
 console.log('Hello!');
 
-
-if (module.hot)        // eslint-disable-line no-undef
-  module.hot.accept(); // eslint-disable-line no-undef
+if (module.hot) {
+  module.hot.accept();
+}

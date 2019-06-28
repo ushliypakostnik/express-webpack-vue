@@ -1,14 +1,13 @@
-const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.config.js');
 
 module.exports = merge(common, {
   entry: {
-    main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.js']
+    main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.js'],
   },
   output: {
-    filename: 'js/app.js'
+    filename: 'js/app.js',
   },
   mode: 'development', // process.env.NODE_ENV on DefinePlugin
   target: 'web',
@@ -16,20 +15,20 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
         options: {
           emitWarning: true,
           failOnError: false,
-          failOnWarning: false
-        }
+          failOnWarning: false,
+        },
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         // Loads the javacript into html template provided.
@@ -37,9 +36,9 @@ module.exports = merge(common, {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
-          }
-        ]
+            loader: 'html-loader',
+          },
+        ],
       },
       {
         // styles on css и scss, autoprefix
@@ -48,14 +47,14 @@ module.exports = merge(common, {
           'style-loader',
           'css-loader',
           'postcss-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
-    ]
+    ],
   },
   plugins: [
     // HotReload
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-  ]
+  ],
 });

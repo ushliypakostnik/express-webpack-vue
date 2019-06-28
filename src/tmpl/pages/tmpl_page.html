@@ -1,13 +1,11 @@
 {% extends "../base.html" %}
 
 {% block template %}
-<div class="page {{template01}}">
+<div class="page {{ variable01 }}">
 {% endblock %}
 
 {% block content %}
-    <section>
-        Template01
-    </section>
+<section>{{ variable01 }}</section>
 {% endblock %}
 
 {% block modals %}
