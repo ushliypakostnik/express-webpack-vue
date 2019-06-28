@@ -1,33 +1,33 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <title></title>
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no" />
-    <meta name="HandheldFriendly" content="true">
+  <meta charset="utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <title></title>
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no" />
+  <meta name="HandheldFriendly" content="true">
 
-    <script>
-        var ieVersion = (function() {
-            var ua = window.navigator.userAgent;
-            var msie = ua.indexOf('MSIE');
-            if (msie > 0) {
-                return parseInt (ua.substring(msie + 5, ua.indexOf('.', msie)));
-            }
-            if (ua.indexOf('Trident/7.0') + 1) {
-                return 11;
-            }
-            return 0;
-        })();
-        if (ieVersion && ieVersion < 10) {
-            location.href = './legacy.html';
-        }
-    </script>
+  <script>
+    var ieVersion = (function() {
+      var ua = window.navigator.userAgent;
+      var msie = ua.indexOf('MSIE');
+      if (msie > 0) {
+        return parseInt (ua.substring(msie + 5, ua.indexOf('.', msie)));
+      }
+      if (ua.indexOf('Trident/7.0') + 1) {
+        return 11;
+      }
+      return 0;
+    })();
+    if (ieVersion && ieVersion < 10) {
+      location.href = './legacy.html';
+    }
+  </script>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
 
-    <link href="./images/favicon.png" rel="icon" type="image/jpg" />
+  <link href="./images/favicon.png" rel="icon" type="image/jpg" />
 </head>
 <body>
 
@@ -37,239 +37,190 @@
 <div class="page sandbox">
 
 
-        <div class="page__overlay"></div>
+      <div class="page__overlay"></div>
 
-        <div class="page__panel">
+      <div class="page__panel">
 
-            <a href="#" id="panelClose"><span class="icon icon-close"></span></a>
+        <a href="#" id="panelClose"><span class="icon icon-close"></span></a>
 
-            <ul>
-                <li><a href="#" class="modal-template-trigger">Модаль</a></li>
-                <li><a href="#">Ссылка</a></li>
-                <li><a href="#">Ссылка</a></li>
-                <li><a href="#">Ссылка</a></li>
-                <li><a href="#">Ссылка</a></li>
-                <li><a href="#">Ссылка</a></li>
-            </ul>
+        <ul>
+          <li><a href="#" class="modal-template-trigger">Модаль</a></li>
+          <li><a href="#">Ссылка</a></li>
+          <li><a href="#">Ссылка</a></li>
+          <li><a href="#">Ссылка</a></li>
+          <li><a href="#">Ссылка</a></li>
+          <li><a href="#">Ссылка</a></li>
+        </ul>
 
-        </div>
+      </div>
 
-        <div class="page__content">
+      <div class="page__content">
 
-            <header class="fixed-header" role="banner">
-                <nav role="navigation">
-                    <a href="#" id="panelOpen"><span class="icon icon-navicon"></span></a>
-                    <div class="container">
-                        <div class="logo"><i class="icon icon-bottle" aria-hidden="true"></i><i class="icon icon-bottle" aria-hidden="true"></i>Алкокалендарь</div>
-                        
-                        
-                    </div>
-                </nav>
-            </header>
-
-            <main role="main">
-                
-    <section>
-        <h2 class="sandbox-header">
-            <div class="container">Typography Base</div>
-        </h2>
-        <div class="container">
-            <h1>Съешь же ещё этих мягких французских булок, да выпей чаю.</h1>
-            <h2>Съешь же ещё этих мягких французских булок, да выпей чаю.</h2>
-            <h3>Съешь же ещё этих мягких французских булок, да выпей чаю.</h3>
-            <h4>Съешь же ещё этих мягких французских булок, да выпей чаю.</h4>
-            <h5>Съешь же ещё этих мягких французских булок, да выпей чаю.</h5>
-            <h6>Съешь же ещё этих мягких французских булок, да выпей чаю.</h6>
-            <p>Российская армия готова к любому развитию событий на Украине и в мире, а российская оборонная промышленность к быстрому замещению импорта, в том числе с Украины, в военном производстве. Об этом заявил, по словам депутатов, министр обороны <a href="#">Сергей Шойгу</a> в ходе закрытого правительственного часа в Госдуме.</p>
-            <p>Российская армия готова к любому развитию событий на Украине и в мире, а российская оборонная промышленность к быстрому замещению импорта, в том числе с Украины, в военном производстве. Об этом заявил, по словам депутатов, министр обороны Сергей Шойгу в ходе закрытого правительственного часа в Госдуме.</p>
-        </div>
-    </section>
-    <section>
-        <h2 class="sandbox-header">
-            <div class="container">Form Base</div>
-        </h2>
-        <div class="container">
-            <form class="form form-style form-horizontal labels-on-the-left">
-                <div class="form-group pendant-help-block has-success">
-                    <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label">Название</label>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-5">
-                        <input type="text" class="form-control" />
-                        <span class="help-block">Заполните это поле!</span>
-                    </div>
-                </div>
-                <div class="form-group pendant-help-block has-warning">
-                    <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label">Название</label>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-5">
-                        <input type="text" class="form-control" />
-                        <span class="help-block">Заполните это поле!</span>
-                    </div>
-                </div>
-                <div class="form-group pendant-help-block has-error">
-                    <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label">Название</label>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-5">
-                        <input type="text" class="form-control" placeholder="placeholder" />
-                        <span class="help-block">Заполните это поле!</span>
-                    </div>
-                </div>
-                <div class="form-group pendant-help-block">
-                    <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label">Категория</label>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-5">
-                        <select class="form-control">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                        <span class="help-block">Заполните это поле!</span>
-                    </div>
-                </div>
-                <div class="form-group pendant-help-block">
-                    <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label">Текст новости</label>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-7">
-                        <textarea class="form-control feedback" rows="2" placeholder="..."></textarea>
-                        <div class="textarea-help"></div>
-                        <span class="help-block">Заполните это поле!</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label"></label>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
-                        <div>
-                          <a href="#" class="btn btn-default">Default</a>
-                          <a href="#" class="btn btn-primary">Primary</a>
-                          <a href="#" class="btn btn-success">Success</a>
-                          <a href="#" class="btn btn-info">Info</a>
-                          <a href="#" class="btn btn-warning">Warning</a>
-                          <a href="#" class="btn btn-danger">Danger</a>
-                          <a href="#" class="btn btn-link">Link</a>
-                        </div>
-                        <div>
-                          <a href="#" class="btn btn-default disabled">Default</a>
-                          <a href="#" class="btn btn-primary disabled">Primary</a>
-                          <a href="#" class="btn btn-success disabled">Success</a>
-                          <a href="#" class="btn btn-info disabled">Info</a>
-                          <a href="#" class="btn btn-warning disabled">Warning</a>
-                          <a href="#" class="btn btn-danger disabled">Danger</a>
-                          <a href="#" class="btn btn-link disabled">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-    <section>
-        <h2 class="sandbox-header">
-            <div class="container">Modal Test</div>
-        </h2>
-        <div class="container">
-            <button class="btn btn-lg modal-template-trigger">Модаль</button>
-        </div>
-    </section>
-    <section>
-        <h2 class="sandbox-header">
-            <div class="container">Bootstrap Grid</div>
-        </h2>
-        <div class="container">
-            <div class="test-row">
-                <div class="row">
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <div></div>
-                    </div>
-                </div>
+        <header class="fixed-header" role="banner">
+          <nav role="navigation">
+            <a href="#" id="panelOpen"><span class="icon icon-navicon"></span></a>
+            <div class="container">
+              <div class="logo"><i class="icon icon-bottle" aria-hidden="true"></i><i class="icon icon-bottle" aria-hidden="true"></i>Алкокалендарь</div>
+              
+              
             </div>
-        </div>
-    </section>
-    <section>
-        <h2 class="sandbox-header">
-            <div class="container">Font-Awesome Test</div>
-        </h2>
-        <div class="container">
-            <ul class="icon-list">
-                <li><i class="fa fa-truck"></i></li>
-                <li><i class="fa fa-paw"></i></li>
-                <li><i class="fa fa-flash"></i></li>
-            </ul>
-        </div>
-        <h2 class="sandbox-header">
-            <div class="container">Custom Font Test</div>
-        </h2>
-        <div class="container">
-            <ul class="icon-list">
-                <li><i class="icon icon-close"></i></li>
-                <li><i class="icon icon-navicon"></i></li>
-                <li><i class="icon icon-up"></i></li>
-                <li><i class="icon icon-down"></i></li>
-                <li><i class="icon icon-left"></i></li>
-                <li><i class="icon icon-right"></i></li>
-                <li><i class="icon icon-bottle"></i></li>
-                <li><i class="icon icon-profile"></i></li>
-            </ul>
-        </div>
-    </section>
+          </nav>
+        </header>
 
-            </main>
-
-            <footer role="contentinfo">
-                <div class="container">
-                    <address>© 2010–2015</address>
-                </div>
-            </footer>
+        <main role="main">
+          
+<section>
+  <h2 class="sandbox-header">
+    <div class="container">Typography Base</div>
+  </h2>
+  <div class="container">
+    <h1>Съешь же ещё этих мягких французских булок, да выпей чаю.</h1>
+    <h2>Съешь же ещё этих мягких французских булок, да выпей чаю.</h2>
+    <h3>Съешь же ещё этих мягких французских булок, да выпей чаю.</h3>
+    <h4>Съешь же ещё этих мягких французских булок, да выпей чаю.</h4>
+    <h5>Съешь же ещё этих мягких французских булок, да выпей чаю.</h5>
+    <h6>Съешь же ещё этих мягких французских булок, да выпей чаю.</h6>
+    <p>Российская армия готова к любому развитию событий на Украине и в мире, а российская оборонная промышленность к быстрому замещению импорта, в том числе с Украины, в военном производстве. Об этом заявил, по словам депутатов, министр обороны <a href="#">Сергей Шойгу</a> в ходе закрытого правительственного часа в Госдуме.</p>
+    <p>Российская армия готова к любому развитию событий на Украине и в мире, а российская оборонная промышленность к быстрому замещению импорта, в том числе с Украины, в военном производстве. Об этом заявил, по словам депутатов, министр обороны Сергей Шойгу в ходе закрытого правительственного часа в Госдуме.</p>
+  </div>
+</section>
+<section>
+  <h2 class="sandbox-header">
+      <div class="container">Form Base</div>
+  </h2>
+  <div class="container">
+    <form class="form form-style form-horizontal labels-on-the-left">
+      <div class="form-group pendant-help-block has-success">
+        <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label">Название</label>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-5">
+          <input type="text" class="form-control" />
+          <span class="help-block">Заполните это поле!</span>
         </div>
+      </div>
+      <div class="form-group pendant-help-block has-warning">
+        <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label">Название</label>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-5">
+          <input type="text" class="form-control" />
+          <span class="help-block">Заполните это поле!</span>
+        </div>
+      </div>
+      <div class="form-group pendant-help-block has-error">
+        <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label">Название</label>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-5">
+          <input type="text" class="form-control" placeholder="placeholder" />
+          <span class="help-block">Заполните это поле!</span>
+        </div>
+      </div>
+      <div class="form-group pendant-help-block">
+          <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label">Категория</label>
+          <div class="col-xs-12 col-sm-8 col-md-8 col-lg-5">
+            <select class="form-control">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <span class="help-block">Заполните это поле!</span>
+          </div>
+      </div>
+      <div class="form-group pendant-help-block">
+        <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label">Текст новости</label>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-7">
+          <textarea class="form-control feedback" rows="2" placeholder="..."></textarea>
+          <div class="textarea-help"></div>
+          <span class="help-block">Заполните это поле!</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label"></label>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+          <div>
+            <a href="#" class="btn btn-default">Default</a>
+            <a href="#" class="btn btn-primary">Primary</a>
+            <a href="#" class="btn btn-success">Success</a>
+            <a href="#" class="btn btn-info">Info</a>
+            <a href="#" class="btn btn-warning">Warning</a>
+            <a href="#" class="btn btn-danger">Danger</a>
+            <a href="#" class="btn btn-link">Link</a>
+          </div>
+          <div>
+            <a href="#" class="btn btn-default disabled">Default</a>
+            <a href="#" class="btn btn-primary disabled">Primary</a>
+            <a href="#" class="btn btn-success disabled">Success</a>
+            <a href="#" class="btn btn-info disabled">Info</a>
+            <a href="#" class="btn btn-warning disabled">Warning</a>
+            <a href="#" class="btn btn-danger disabled">Danger</a>
+            <a href="#" class="btn btn-link disabled">Link</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<section>
+  <h2 class="sandbox-header">
+    <div class="container">Modal Test</div>
+  </h2>
+  <div class="container">
+    <button class="btn btn-lg modal-template-trigger">Модаль</button>
+  </div>
+</section>
+<section>
+  <h2 class="sandbox-header">
+    <div class="container">Font-Awesome Test</div>
+  </h2>
+  <div class="container">
+    <ul class="icon-list">
+      <li><i class="fa fa-truck"></i></li>
+      <li><i class="fa fa-paw"></i></li>
+      <li><i class="fa fa-flash"></i></li>
+    </ul>
+  </div>
+  <h2 class="sandbox-header">
+    <div class="container">Custom Font Test</div>
+  </h2>
+  <div class="container">
+    <ul class="icon-list">
+      <li><i class="icon icon-close"></i></li>
+      <li><i class="icon icon-navicon"></i></li>
+      <li><i class="icon icon-up"></i></li>
+      <li><i class="icon icon-down"></i></li>
+      <li><i class="icon icon-left"></i></li>
+      <li><i class="icon icon-right"></i></li>
+    </ul>
+  </div>
+</section>
+
+        </main>
+
+        <footer role="contentinfo">
+          <div class="container">
+            <address>© 2010–2015</address>
+          </div>
+        </footer>
+      </div>
 
     </div>
 
     <!-- modals -->
 
     
-    
+  
     <div class="modal fade" id="modal-template" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-template">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Название модали</h3>
-                    <a href="#" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon icon-close"></span></a>
-                </div>
-                <div class="modal-body">
-                    <p>Российская армия готова к любому развитию событий на Украине и в мире, а российская оборонная промышленность к быстрому замещению импорта, в том числе с Украины, в военном производстве. Об этом заявил, по словам депутатов, министр обороны Сергей Шойгу в ходе закрытого правительственного часа в Госдуме.</p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
+      <div class="modal-dialog modal-template">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Название модали</h3>
+            <a href="#" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon icon-close"></span></a>
+          </div>
+          <div class="modal-body">
+            <p>Российская армия готова к любому развитию событий на Украине и в мире, а российская оборонная промышленность к быстрому замещению импорта, в том числе с Украины, в военном производстве. Об этом заявил, по словам депутатов, министр обороны Сергей Шойгу в ходе закрытого правительственного часа в Госдуме.</p>
+          </div>
+          <div class="modal-footer">
+          </div>
         </div>
+      </div>
     </div>
     
 
