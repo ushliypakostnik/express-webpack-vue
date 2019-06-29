@@ -1,7 +1,7 @@
 Express start project with Webpack bundler
 ==========================================
 
-Стартовый проект на Express c Webpack, Nunjucks, SCSS, Fontello and Hot Reloading in dev mode.
+Стартовый проект на Express c Webpack, Nunjucks, SCSS, Fontello, FontAwesome and Hot Reloading in dev mode.
 
 
 Deploy
