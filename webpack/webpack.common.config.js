@@ -10,6 +10,14 @@ module.exports = {
   module: {
     rules: [
       {
+        // Transpiles ES6-8 into ES5
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
         // images and fonts
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         use: {
