@@ -8,7 +8,9 @@
     "buildProd": "rm -rf build && webpack --mode production --config webpack/webpack.server.config.js && webpack --mode production --config webpack/webpack.prod.config.js",
     "start": "node ./build/server.js",
     "lint": "eslint ./webpack ./src",
-    "test": "cross-env NODE_ENV=development jest --watch"
+    "test": "cross-env NODE_ENV=development jest --watch",
+    "build:stats": "npm run buildDev && webpack --mode development --config=webpack/webpack.dev.config.js --profile --json > stats.json",
+    "view:stats": "webpack-bundle-analyzer stats.json"
   },
   "keywords": [],
   "author": "",
@@ -62,6 +64,7 @@
     "style-loader": "^0.21.0",
     "supertest": "^4.0.2",
     "url-loader": "^1.1.2",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3"

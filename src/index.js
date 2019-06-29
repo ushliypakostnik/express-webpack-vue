@@ -1,10 +1,10 @@
-// Way 1 - very large files
+// Way 1 - very large bundle
 // import '@fortawesome/fontawesome-free/js/fontawesome';
 // import '@fortawesome/fontawesome-free/js/solid';
 // import '@fortawesome/fontawesome-free/js/regular';
 // import '@fortawesome/fontawesome-free/js/brands';
 
-// Way 2 - very large flies too
+// Way 2 - very large bundle too
 
 // Solid
 // https://fontawesome.com/icons?d=gallery&s=solid&m=free
