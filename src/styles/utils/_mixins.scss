@@ -143,43 +143,6 @@
 // Effects
 //////////////////////////////////////////////////////
 
-// Flexbox mixins
-
-@mixin flexbox {
-  display: -webkit-box;
-    display: -webkit-flex; // ??
-      display: -ms-flexbox;
-        display: -moz-flex; // ??
-  display: flex;
-
-  -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-
-  -webkit-box-pack: start;
-    -ms-flex-pack: start;
-  justify-content: flex-start;
-
-  -webkit-box-align: start;
-    -ms-flex-align: start;
-  align-items: flex-start;
-}
-
-// Flex on not desctop
-@mixin not-lg-flexbox {
-  @include not-lg {
-    @include flexbox;
-  }
-}
-
-// Order
-@mixin flex-order($order) {
-  -webkit-box-ordinal-group: $order + 1;
-  -ms-flex-order: $order;
-  order: $order;
-}
-
 // Multi-transition
 // Usage:   @include transition(width, height 0.3s ease-in-out);
 //
