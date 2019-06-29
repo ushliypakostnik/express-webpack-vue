@@ -1,10 +1,10 @@
-// Way 1 - very large
+// Way 1 - very large files
 // import '@fortawesome/fontawesome-free/js/fontawesome';
 // import '@fortawesome/fontawesome-free/js/solid';
 // import '@fortawesome/fontawesome-free/js/regular';
 // import '@fortawesome/fontawesome-free/js/brands';
 
-// Way 2 - very large too
+// Way 2 - very large flies too
 
 // Solid
 // https://fontawesome.com/icons?d=gallery&s=solid&m=free
@@ -25,7 +25,7 @@ import { faPhone, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-i
 import Favicon from './images/favicon.jpg'; // eslint-disable-line no-unused-vars
 
 import './styles/_stylebase.scss';
-// import Someimage from './images/layout/someimagе.png';
+// import someimage from './images/layout/someimagе.png';
 // import somescript from './js/somescript';
 
 library.add(faPhone, faEnvelope, faPaperPlane);
