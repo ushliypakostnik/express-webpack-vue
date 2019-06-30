@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const common = require('./webpack.common.config.js');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const common = require('./webpack.common.config.js');
 
 module.exports = merge(common, {
   entry: {
@@ -20,7 +20,7 @@ module.exports = merge(common, {
         enforce: 'pre',
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         enforce: 'pre',

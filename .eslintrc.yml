@@ -7,10 +7,10 @@ env:
 globals:
   window: true
   console: true
-parser: babel-eslint
+parser: vue-eslint-parser
 extends:
   - 'airbnb-base'
-  - 'plugin:vue/essential'
+  - 'plugin:vue/recommended'
   - 'plugin:jest/recommended'
 rules:
   no-console: off

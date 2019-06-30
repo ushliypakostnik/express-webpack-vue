@@ -45,7 +45,6 @@ $font-weight_sans_bold: 700;
   font-weight: $font-weight;
   letter-spacing: $normal-letter-spacing;
 
-  /* stylelint-disable */
   @if $font-size == $font-size_large {
     line-height: $line-height_large;
   } @else if $font-size == $font-size_normal {
@@ -57,7 +56,6 @@ $font-weight_sans_bold: 700;
   } @else {
     line-height: floor($font-size * $line-height_base);
   }
-  /* stylelint-enable */
 }
 
 

@@ -11,8 +11,8 @@ import app from './components/app.vue';
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<app/>',
   components: { app },
+  template: '<app/>',
 });
 
 if (module.hot) {

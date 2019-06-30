@@ -1,7 +1,7 @@
 Express start project with Webpack bundler and Vue
 ==================================================
 
-Стартовый проект на Express c Webpack и Vue. C Nunjucks, SCSS, Fontello. С Hot Reloading и ES и style линтерами в режиме разработки.
+Стартовый проект на Express c Webpack и Vue. C Nunjucks, SCSS, Fontello. С ES и style линтерами и Hot Reloading в режиме разработки.
 
 
 Deploy
