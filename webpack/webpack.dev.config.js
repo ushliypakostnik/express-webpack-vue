@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.config.js');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = merge(common, {
   entry: {
@@ -51,5 +52,13 @@ module.exports = merge(common, {
     // HotReload
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    // Stylelint
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      context: 'src/styles',
+      files: ['**/*.css', '**/*.scss'],
+      failOnError: false,
+      syntax: 'scss',
+    }),
   ],
 });

@@ -84,7 +84,6 @@ a {
 
 abbr[title] {
   border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
 }
 
@@ -94,7 +93,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: bolder; /* stylelint-disable font-weight-notation */
 }
 
 /**
@@ -174,8 +173,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
-  overflow: visible;
+input {
+  overflow: visible; /* 1 */
 }
 
 /**
@@ -184,8 +183,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
-  text-transform: none;
+select {
+  text-transform: none; /* 1 */
 }
 
 /**

@@ -20,15 +20,6 @@ body {
   backface-visibility: hidden;
 }
 
-// Кнопки
-button, a {
-  outline: none !important;
-
-  &:hover, &:active, &:focus {
-    outline: none !important;
-  }
-}
-
 // Ccылки
 a {
   color: $color_link;
@@ -37,10 +28,17 @@ a {
   &:hover {
     color: $color_link-hover;
   }
+}
 
-  &:hover, &:active , &:focus {
-    outline: none !important;
-    text-decoration: none;
+// Кнопки
+button,
+a { // stylelint-disable-line no-descending-specificity
+  outline: none !important; // stylelint-disable-line declaration-no-important
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none !important; // stylelint-disable-line declaration-no-important
   }
 }
 

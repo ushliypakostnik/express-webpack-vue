@@ -4,7 +4,7 @@
 // Multiply Animation Mixin
 @mixin animation($animate...) {
   $max: length($animate);
-  $animations: '';
+  $animations: "";
 
   @for $i from 1 through $max {
     $animations: #{$animations + nth($animate, $i)};
@@ -23,6 +23,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -32,6 +33,7 @@
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }

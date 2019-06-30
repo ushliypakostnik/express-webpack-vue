@@ -53,9 +53,9 @@
 // Retina
 @mixin retina {
   @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
-  only screen and (-moz-min-device-pixel-ratio: 1.5),
-  only screen and (-o-min-device-pixel-ratio: 3/2),
-  only screen and (min-device-pixel-ratio: 1.5) {
+    only screen and (-moz-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min-device-pixel-ratio: 1.5) {
     @content;
   }
 }
@@ -77,16 +77,20 @@
   color: $color;
   @include transition(background $transition-duration $transition-timing-function $transition-delay);
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background-color: darken($background, $fade );
     color: $color;
   }
 
   @include sm-and-xs {
-    &, &:hover, &:focus {
+    &,
+    &:hover,
+    &:focus {
       background-color: $background;
       color: $color;
     }
+
     &:active {
       background-color: darken($background, $fade);
       color: $color;
@@ -101,16 +105,20 @@
   border-color: $color;
   @include transition(all $transition-duration $transition-timing-function $transition-delay);
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: darken($color, $fade);
     border-color: darken($color, $fade);
   }
 
   @include sm-and-xs {
-    &, &:hover, &:focus {
+    &,
+    &:hover,
+    &:focus {
       color: $color;
       border-color: $color;
     }
+
     &:active {
       color: darken($color, $fade);
       border-color: darken($color, $fade);
@@ -122,17 +130,23 @@
 @mixin link-style($color, $color-hover) {
   @include transition(color $transition-duration $transition-timing-function $transition-delay);
 
-  &, &:focus {
+  &,
+  &:focus {
     color: $color;
   }
-  &:hover, &:active {
+
+  &:hover,
+  &:active {
     color: $color-hover;
   }
 
   @include sm-and-xs {
-    &, &:hover, &:focus {
-     color: $color;
+    &,
+    &:hover,
+    &:focus {
+      color: $color;
     }
+
     &:active {
       color: $color-hover;
     }
@@ -151,6 +165,7 @@
 // Pass in any number of transitions
 @mixin transition($transitions...) {
   $unfoldedTransitions: ();
+
   @each $transition in $transitions {
     $unfoldedTransitions: append($unfoldedTransitions, unfoldTransition($transition), comma);
   }
@@ -168,12 +183,14 @@
 
   // Grab transition properties if they exist
   $unfoldedTransition: ();
+
   @for $i from 1 through length($defaultProperties) {
     $p: null;
+
     @if $i <= length($transition) {
-      $p: nth($transition, $i)
+      $p: nth($transition, $i);
     } @else {
-      $p: nth($defaultProperties, $i)
+      $p: nth($defaultProperties, $i);
     }
     $unfoldedTransition: append($unfoldedTransition, $p);
   }
