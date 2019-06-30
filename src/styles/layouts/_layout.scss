@@ -1,32 +1,3 @@
 .page {
-  &__menu {
-    background: $color_black;
-    padding: 10px 20px;
-    margin: 0;
-
-    > li {
-      display: inline-block;
-      font-size: 30px;
-      margin-right: 40px;
-
-      a svg { // stylelint-disable-line selector-max-compound-selectors
-        margin-right: 10px;
-      }
-    }
-
-    &--active {
-      color: $color_white;
-    }
-  }
-
-  &__section {
-    display: none;
-    padding: 20px;
-    font-size: 50px;
-    font-weight: 700;
-
-    &--active {
-      display: block;
-    }
-  }
+  /* ... */
 }
