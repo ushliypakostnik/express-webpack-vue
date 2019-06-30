@@ -5,7 +5,13 @@ node_modules
 # production
 build
 
+# local trash
 .sass-cache
 npm-debug.log
 
+# IDEs & editors
 *.sublime-workspace
+.idea
+
+# webpack stats analyzer file
+stats.json

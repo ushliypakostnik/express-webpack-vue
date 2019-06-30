@@ -38,7 +38,7 @@ module.exports = {
           from: path.resolve(__dirname, '../src/tmpl/pages/sandbox_page.html'),
           to: path.resolve(__dirname, '../src/html/sandbox_page.html'),
         },
-      ], // configure: [{}]
+      ],
     }),
     new HtmlWebpackPlugin({
       filename: 'html/legacy.html',
