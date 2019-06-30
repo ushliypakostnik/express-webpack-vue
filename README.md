@@ -39,6 +39,6 @@ Cборка
 
     $ npm run stylelint
 
-Запуск тестов
+Запуск модульных тестов
 
     $ npm run test
