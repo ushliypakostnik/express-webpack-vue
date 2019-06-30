@@ -12,7 +12,7 @@ module.exports = merge(common, {
   output: {
     filename: 'js/app.min.js',
   },
-  mode: 'production', // process.env.NODE_ENV on DefinePlugin
+  mode: 'production', // process.env.NODE_ENV
   target: 'web',
   devtool: '#source-map',
   // Webpack 4 does not have a CSS minifier, although

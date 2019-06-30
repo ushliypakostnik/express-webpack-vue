@@ -10,16 +10,23 @@ module.exports = merge(common, {
   output: {
     filename: 'js/app.js',
   },
-  mode: 'development', // process.env.NODE_ENV on DefinePlugin
+  mode: 'development', // process.env.NODE_ENV
   target: 'web',
   devtool: '#source-map',
   module: {
     rules: [
+      // Single File Components
+      {
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
       {
         enforce: 'pre',
         test: /\.js$/,
-        exclude: /node_modules/,
         loader: 'eslint-loader',
+        exclude: /node_modules/,
         options: {
           emitWarning: true,
           failOnError: false,
@@ -40,10 +47,18 @@ module.exports = merge(common, {
         // styles on css и scss, autoprefix
         test: /\.s?css$/i,
         use: [
-          'style-loader',
-          'css-loader',
+          'vue-style-loader',
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              data: '@import "./src/styles/_stylebase.scss";',
+            },
+          },
           'postcss-loader',
-          'sass-loader',
         ],
       },
     ],

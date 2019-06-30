@@ -1,4 +1,5 @@
 const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -10,12 +11,17 @@ module.exports = {
   module: {
     rules: [
       {
-        // Transpiles ES6-8 into ES5
+        test: /\.vue$/,
+        loader: 'vue-loader',
+      },
+      // Transpiles ES6-8 into ES5
+      {
         test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        loader: 'babel-loader',
+        exclude: file => (
+          /node_modules/.test(file)
+          && !/\.vue\.js/.test(file)
+        ),
       },
       {
         // images and fonts
@@ -31,6 +37,8 @@ module.exports = {
     ],
   },
   plugins: [
+    // Vue
+    new VueLoaderPlugin(),
     // templates
     new NunjucksWebpackPlugin({
       templates: [

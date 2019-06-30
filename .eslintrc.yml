@@ -10,6 +10,7 @@ globals:
 parser: babel-eslint
 extends:
   - 'airbnb-base'
+  - 'plugin:vue/essential'
   - 'plugin:jest/recommended'
 rules:
   no-console: off

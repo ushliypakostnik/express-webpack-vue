@@ -1,7 +1,7 @@
-Express start project with Webpack bundler
-==========================================
+Express start project with Webpack bundler and Vue
+==================================================
 
-Стартовый проект на Express c Webpack, Nunjucks, SCSS, Fontello, FontAwesome and Hot Reloading in dev mode.
+Стартовый проект на Express c Webpack и Vue. C Nunjucks, SCSS, Fontello. С Hot Reloading и ES и style линтерами в режиме разработки.
 
 
 Deploy
@@ -42,3 +42,4 @@ Cборка
 Запуск модульных тестов
 
     $ npm run test
+
