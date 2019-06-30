@@ -24,7 +24,7 @@ Cборка
 
     $ npm run buildDev
 
- Сборка статики в продакшен
+Сборка статики в продакшен
 
     $ npm run buildProd
 
@@ -42,4 +42,9 @@ Cборка
 Запуск модульных тестов
 
     $ npm run test
+
+Создать и посмотреть статистику по бандлу:
+
+    $ npm run build:stats
+    $ npm run view:stats
 
