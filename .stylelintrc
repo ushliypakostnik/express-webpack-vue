@@ -218,6 +218,9 @@
     "no-eol-whitespace": [true, {
       "message": "Без пробелов на конце строки"
     }],
+    "no-empty-source": [true, {
+      "message": "Не должно быть пустых мест"
+    }],
     "no-extra-semicolons": [true, {
       "message": "Только одна точка с запятой в конце строки"
     }],
