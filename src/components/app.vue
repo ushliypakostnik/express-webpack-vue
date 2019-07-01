@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <h1>Vue Component!!!</h1>
-    <div id="test">{{ name }}</div>
+    <div
+      id="test"
+    >
+      {{ name }}
+    </div>
     <input
       id="name"
       v-model="name"
