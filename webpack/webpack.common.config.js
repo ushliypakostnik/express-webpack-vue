@@ -1,7 +1,6 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const templates = require('./templates.config.js');
 
 module.exports = {
   output: {
@@ -39,24 +38,6 @@ module.exports = {
   plugins: [
     // Vue
     new VueLoaderPlugin(),
-    // templates
-    new NunjucksWebpackPlugin({
-      templates: [
-        {
-          from: path.resolve(__dirname, '../src/tmpl/pages/sandbox_page.html'),
-          to: path.resolve(__dirname, '../src/html/sandbox_page.html'),
-        },
-      ],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'html/legacy.html',
-      inject: false, // no link css
-      template: path.resolve(__dirname, '../src/html/legacy.html'),
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'html/sandbox_page.html',
-      xhtml: true, // selfclosed tag to link css
-      template: path.resolve(__dirname, '../src/html/sandbox_page.html'),
-    }),
-  ],
+  ].concat(templates.nunjucks).concat(templates.html),
+  // Multiple generating Nunjucks templates and HTML files
 };
