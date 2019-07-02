@@ -5,7 +5,7 @@ const templatesDir = '../src/tmpl/pages';
 const htmlDir = '../src/html';
 
 // Generating multiple Nunjucks templates with NunjucksWebpackPlugin
-function generateNunjucksPlugin(dir) {
+function generateNunjucksConfig(dir) {
   const files = fs.readdirSync(path.resolve(__dirname, dir));
   const plugin = [];
 
@@ -26,7 +26,7 @@ function generateNunjucksPlugin(dir) {
 }
 
 // Generating multiple HTML special pages with HTMLWebpackPlugin
-function generateHtmlPlugins(dir) {
+function generateHtmlConfig(dir) {
   const files = fs.readdirSync(path.resolve(__dirname, dir));
   const plugin = [];
 
@@ -40,8 +40,8 @@ function generateHtmlPlugins(dir) {
   return plugin;
 }
 
-const nunjucks = generateNunjucksPlugin(templatesDir);
-const html = generateHtmlPlugins(htmlDir);
+const nunjucks = generateNunjucksConfig(templatesDir);
+const html = generateHtmlConfig(htmlDir);
 
 const templates = {
   nunjucks,
