@@ -1,10 +1,25 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const templates = require('./templates.config');
 
-console.log(templates);
+const fs = require('fs');
+
+const htmlDir = '../src/html';
+
+// Generating multiple HTML templates config
+function generateHtmlPlugins(dir) {
+  const files = fs.readdirSync(path.resolve(__dirname, dir));
+  const plugin = [];
+
+  files.forEach((item) => {
+    const parts = item.split('.');
+    const name = parts[0];
+    plugin.push(name);
+  });
+
+  return plugin;
+}
+const templates = generateHtmlPlugins(htmlDir);
 
 module.exports = {
   output: {
@@ -43,9 +58,8 @@ module.exports = {
   plugins: [
     // Vue
     new VueLoaderPlugin(),
-    // templates
-    new NunjucksWebpackPlugin(templates.nunjucks),
-    ...templates.html.map((template) => {
+    // HTML templates
+    ...templates.map((template) => {
       if (template === 'legacy') {
         return new HTMLWebpackPlugin({
           filename: `html/${template}.html`,

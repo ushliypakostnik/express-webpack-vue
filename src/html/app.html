@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="description" content="" />
   <meta name="keywords" content="" />
-  <title>{{ title }}</title>
+  <title></title>
   <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no" />
   <meta name="HandheldFriendly" content="true">
 
@@ -30,38 +30,6 @@
   <link href="./images/favicon.png" rel="icon" type="image/jpg" />
 </head>
 <body>
-
-    <!-- page content -->
-
-    {% block template %}
-    <div class="page">
-    {% endblock %}
-
-      <div class="page__content">
-
-        <header class="fixed-header" role="banner">
-          <nav role="navigation">
-            <div class="container">
-              {% block header %}
-              {% endblock %}
-            </div>
-          </nav>
-        </header>
-
-        <main role="main">
-          {% block content %}
-          {% endblock %}
-        </main>
-
-        <footer role="contentinfo">
-          <div class="container">
-            <address>2019</address>
-          </div>
-        </footer>
-      </div>
-
-    </div>
-
-    <!-- /page content -->
+  <div id="app"></div>
 </body>
 </html>

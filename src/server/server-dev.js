@@ -7,7 +7,7 @@ import WebpackConfig from '../../webpack/webpack.dev.config';
 import config from '../config';
 
 const app = express();
-const HTML_FILE = path.join(config.DIST_DIR, `html/${config.TEMPLATES.LOGIN}.html`);
+const HTML_FILE = path.join(config.DIST_DIR, `html/${config.TEMPLATES.APP}.html`);
 const compiler = webpack(WebpackConfig);
 
 app.use(webpackDevMiddleware(compiler, {
