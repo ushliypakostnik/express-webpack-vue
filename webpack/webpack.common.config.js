@@ -1,6 +1,10 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const templates = require('./templates.config.js');
+const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const templates = require('./templates.config');
+
+console.log(templates);
 
 module.exports = {
   output: {
@@ -9,6 +13,7 @@ module.exports = {
   },
   module: {
     rules: [
+      // Vue
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -38,6 +43,21 @@ module.exports = {
   plugins: [
     // Vue
     new VueLoaderPlugin(),
-  ].concat(templates.nunjucks).concat(templates.html),
-  // Multiple generating Nunjucks templates and HTML files
+    // templates
+    new NunjucksWebpackPlugin(templates.nunjucks),
+    ...templates.html.map((template) => {
+      if (template === 'legacy') {
+        return new HTMLWebpackPlugin({
+          filename: `html/${template}.html`,
+          inject: false, // no link css
+          template: path.resolve(__dirname, `../src/html/${template}.html`),
+        });
+      }
+      return new HTMLWebpackPlugin({
+        filename: `html/${template}.html`,
+        xhtml: true, // selfclosed tag to link css
+        template: path.resolve(__dirname, `../src/html/${template}.html`),
+      });
+    }),
+  ],
 };

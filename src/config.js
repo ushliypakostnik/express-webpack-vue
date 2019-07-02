@@ -8,9 +8,18 @@ const env = process.env.NODE_ENV;
 const htmlDir = './html';
 const TEMPLATES = fs.readdirSync(path.resolve(__dirname, htmlDir));
 
+let pages = {};
+TEMPLATES.forEach((template) => {
+  const parts = template.split('.');
+  const name = parts[0];
+  pages = Object.assign({}, pages, {
+    [name.toUpperCase()]: name,
+  });
+});
+
 const common = {
   PORT: process.env.PORT || 8080,
-  TEMPLATES,
+  TEMPLATES: pages,
 };
 
 const development = {
